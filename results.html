@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to bottom right, rgb(255, 200, 241), rgb(255, 255, 197));
+        }
+
+        .output {
+            width: 50%;
+        }
+
+        .title {
+            justify-content: center;
+            display: flex;
+        }
+
+        .data {
+            display: flex;
+        }
+
+        .image {
+            padding: 0px 10px 10px 10px;
+
+        }
+
+        .image img {
+            height: 400px;
+            width: 250px;
+        }
+
+        .output {
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .desc{
+            padding-left: 10px;
+        }
+        a {
+            color: white;
+            background-color: #083375;
+            padding: 5px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="output">
+        <div class="title">
+            <h1>{{title}}
+            </h1>
+        </div>
+        <hr width="100%">
+        <div class="data">
+            <div class="image">
+                <img src={{image}} alt="animeimage">
+            </div>
+            <div class="data">
+                <table>
+                    <tr>
+                        <td>Original Title: </td>
+                        <td class="desc">{{orgTitle}}</td>
+                    </tr>
+                    <tr>
+                        <td>Director: </td>
+                        <td class="desc">{{ director }}</td>
+                    </tr>
+                    <tr>
+                        <td>Producer: </td>
+                        <td class="desc">{{ producer }}</td>
+                    </tr>
+                    <tr>
+                        <td>Release Date: </td>
+                        <td class="desc">{{ rdate }}</td>
+                    </tr>
+                    <tr>
+                        <td>RT Score: </td>
+                        <td class="desc">{{ rtScore }}</td>
+                    </tr>
+                    <tr>
+                        <td>Description: </td>
+                        <td class="desc">
+                            <p > {{ description }} </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <a href="http://localhost:8080/">Return to Home</a>
+    </div>
+</body>
+
+</html>
